@@ -34,7 +34,7 @@ app.get("/blogs",function(req,res){
 });
 app.get("/",function(req,res){
     res.redirect("blogs");
-})
+});
 
 app.listen(4000,function(req,res){
     console.log("Server is online on port 4000 now");
