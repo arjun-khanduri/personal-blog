@@ -3,13 +3,12 @@
 <div class="ui main text container">
     <div class="ui header">My entries</div>
     <div class="ui top attached segment">
-        <div class="ui divided items">
+        <div class="ui link cards">
             <%blogs.forEach(function(blog){%>
-  <div id="blogdet">
-      <h2><%=blog.title%></h2>
-      <span><%=blog.created%></span>
-      <p><%=blog.body.substring(0,100)%>...</p>
-      <a class="ui button primary basic" href="/blogs/<%= blog._id %>">Read More<i class="angle right icon"></i></a>
+  <div id="blogdet" class="card">
+      <div class="header"><h2 style="text-align:center;"><%=blog.title%></h2></div>
+      <div class="content"><%=blog.body.substring(0,100)%>...</div>
+      <a class="ui bottom attached button" href="/blogs/<%= blog._id %>">Read More<i class="angle right icon"></i></a>
   </div>  
 <%});%>
         </div>
