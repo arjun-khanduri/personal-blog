@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+
+<body>
+    <div class="ui raised very padded text container segment login">
+      <p class="ui huge header btn-center">Register</p>
+      <form class="ui form" method="post" action="/register">
+        <div class="field">
+          <label>Username</label>
+          <input type="text" name="username" placeholder="Username">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="btn-center">
+          <button class="ui primary button" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
