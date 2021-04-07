@@ -1,21 +1,29 @@
-<% include ./partials/header %>
+<html>
 
+<head>
+  <title>
+    <%=title%>
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="/stylesheets/app.css" type="text/css">
+</head>
 
 <body>
-    <div class="ui raised very padded text container segment login">
-      <p class="ui huge header btn-center">Register</p>
-      <form class="ui form" method="post" action="/register">
-        <div class="field">
-          <label>Username</label>
-          <input type="text" name="username" placeholder="Username">
-        </div>
-        <div class="field">
-          <label>Password</label>
-          <input type="password" name="password" placeholder="Password">
-        </div>
-        <div class="btn-center">
-          <button class="ui primary button" type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-  </body>
+  <div class="ui raised very padded text container segment login">
+    <p class="ui huge header center">Register</p>
+    <form class="ui form" method="post" action="/register">
+      <div class="field">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Username">
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password">
+      </div>
+      <div class="center">
+        <button class="ui primary button" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>

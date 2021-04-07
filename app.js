@@ -47,7 +47,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.get('/blogs', function (req, res) {
-    Blog.find({}, function (err, blogs) {
+    Blog.find({username: req.user.username}, function (err, blogs) {
         if (err)
             console.log('Error!');
         else
@@ -56,7 +56,7 @@ app.get('/blogs', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-    res.redirect('/blogs');
+    res.redirect('/login');
 });
 
 app.listen(4000, function (req, res) {
